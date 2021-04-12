@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="InputView" customModule="memoToEver" customModuleProvider="target">
+            <connections>
+                <outlet property="albamBtn" destination="W8N-pe-dGo" id="a62-0S-ECQ"/>
+                <outlet property="cameraBtn" destination="cl4-aD-ubv" id="FYj-yP-iOH"/>
+                <outlet property="inputField" destination="Ml5-Dz-vLa" id="TEa-zD-kMp"/>
+                <outlet property="listBtn" destination="tE9-2s-7fh" id="QbC-xh-jth"/>
+                <outlet property="timeBtn" destination="fvE-Uo-Lde" id="ORh-ZG-lZg"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="100"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="PF7-S8-qR3">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                    <items>
+                        <barButtonItem image="photo" catalog="system" id="W8N-pe-dGo">
+                            <color key="tintColor" systemColor="labelColor"/>
+                            <connections>
+                                <action selector="onAlbam:" destination="-1" id="HiV-VP-8wA"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem image="camera" catalog="system" id="cl4-aD-ubv">
+                            <color key="tintColor" systemColor="labelColor"/>
+                            <connections>
+                                <action selector="onCamera:" destination="-1" id="QzQ-52-CPo"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem image="list.bullet" catalog="system" id="tE9-2s-7fh">
+                            <color key="tintColor" systemColor="labelColor"/>
+                            <connections>
+                                <action selector="onList:" destination="-1" id="qkY-nZ-rK4"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem image="clock" catalog="system" id="fvE-Uo-Lde">
+                            <color key="tintColor" systemColor="labelColor"/>
+                            <connections>
+                                <action selector="onTime:" destination="-1" id="ys2-HK-mW2"/>
+                            </connections>
+                        </barButtonItem>
+                    </items>
+                </toolbar>
+                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" scrollEnabled="NO" text="ああああああ" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Ml5-Dz-vLa">
+                    <rect key="frame" x="4" y="48" width="289" height="48"/>
+                    <color key="backgroundColor" name="textCellColor"/>
+                    <color key="textColor" systemColor="labelColor"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                </textView>
+                <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0tB-e8-OK3">
+                    <rect key="frame" x="295" y="74" width="21" height="22"/>
+                    <state key="normal" image="paperplane.fill" catalog="system">
+                        <color key="titleColor" systemColor="systemGreenColor"/>
+                    </state>
+                    <connections>
+                        <action selector="onSend:" destination="-1" eventType="touchUpInside" id="z5Z-wy-PyN"/>
+                    </connections>
+                </button>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="PF7-S8-qR3" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="0ag-0K-HHH"/>
+                <constraint firstItem="Ml5-Dz-vLa" firstAttribute="top" secondItem="PF7-S8-qR3" secondAttribute="bottom" constant="4" id="80T-GL-77T"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="0tB-e8-OK3" secondAttribute="trailing" constant="4" id="BS8-Sf-7pk"/>
+                <constraint firstItem="Ml5-Dz-vLa" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="4" id="Fhz-fw-rlp"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="0tB-e8-OK3" secondAttribute="bottom" constant="4" id="Qgg-y4-E2S"/>
+                <constraint firstItem="PF7-S8-qR3" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="UGm-J5-E9N"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="Ml5-Dz-vLa" secondAttribute="bottom" constant="4" id="gib-4f-2nq"/>
+                <constraint firstItem="PF7-S8-qR3" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="rbd-zy-ZqG"/>
+                <constraint firstItem="0tB-e8-OK3" firstAttribute="leading" secondItem="Ml5-Dz-vLa" secondAttribute="trailing" constant="2" id="rht-SS-ZNq"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="360" y="-185.30734632683661"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="camera" catalog="system" width="128" height="94"/>
+        <image name="clock" catalog="system" width="128" height="121"/>
+        <image name="list.bullet" catalog="system" width="128" height="88"/>
+        <image name="paperplane.fill" catalog="system" width="128" height="118"/>
+        <image name="photo" catalog="system" width="128" height="93"/>
+        <namedColor name="textCellColor">
+            <color red="0.97647058823529409" green="0.97647058823529409" blue="0.97647058823529409" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGreenColor">
+            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
